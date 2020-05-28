@@ -1,3 +1,5 @@
+![Node.js CI](https://github.com/t-sieber/vuejs-demoUserManagement/workflows/Node.js%20CI/badge.svg)
+
 # demousermanagement
 
 ## Project setup
