@@ -6,10 +6,10 @@
                 <th style="border: 1px solid black;">Navigator</th>
                 <th style="border: 1px solid black;">Date</th>
             </tr>
-            <tr v-for="attempt in $attrs.attempts" :key="attempt">
+            <tr v-for="attempt in $attrs.attempts" :key="attempt._id">
                 <td style="border: 1px solid black;">{{attempt.state}}</td>
-                <td style="border: 1px solid black;">{{attempt.userInfo}}</td>
-                <td style="border: 1px solid black;">{{attempt.dateTime}}</td>
+                <td style="border: 1px solid black;">{{attempt.userAgent}}</td>
+                <td style="border: 1px solid black;">{{attempt.timeStamp}}</td>
             </tr>
         </table>
     </div>
@@ -18,6 +18,7 @@
 <script>
 export default {
     name: "LogInHistory",
+    
     
 }
 </script>

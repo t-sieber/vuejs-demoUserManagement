@@ -20,8 +20,19 @@ export default {
         userInfo: {name: '', mail: '', password: ''},
         userLoginData: []
       }
+  },
+  created: function() {
+    fetch('http://localhost:8082/getLogs')
+    .then(response => response.json())
+    .then(data => {this.userLoginData = data;})
+    .catch(error => {
+        console.error('Request failed', error);
+    });     
   }, 
   methods: {
+    json(response) {
+      return response.json();
+    },
     attemptLogin(credentials) {
       this.userLoginData.push({'state': 'ERROR', 'userInfo': window.navigator.userAgent, 'dateTime': new Date(), })
       this.userInfo = credentials;
